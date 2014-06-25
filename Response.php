@@ -155,7 +155,7 @@ class Response
 
         try {
             $xml = XmlSecurity::scan($response);
-        } catch (\Zend\Xml\Exception\RuntimeException $e) {
+        } catch (\ZendXml\Exception\RuntimeException $e) {
             $this->fault = new Fault(651);
             $this->fault->setEncoding($this->getEncoding());
             return false;
